@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Estoque</title>
+</head>
+<body style="margin: 100px 300px;">
+    
+    <div style="display:flex; justify-content: space-between;">
+        <div>
+            <h1>Listagem de Produtos</h1>
+            <table style="background-color: white;" id="myTable" cellpadding="2" cellspacing="2" border="1" onclick="tester()"></table>
+        </div>
+        <div>
+        <!-- Adicionar Produto -->
+        <label> Adicionar Novo Produto ao Estoque</label>
+        <div style="border:1px solid black; padding: 30px; background-color: white;">
+            <label for="">Nome</label>
+            <div>
+                <input type="text" id="nome"></input>
+            </div>
+        
+            <label for="descricao">Descrição</label>
+            <div>
+                <input type="text" id="descricao"></input>
+            </div>
+            <label for="">Valor</label>
+            <div>
+                <input type="text" id="preco"></input>
+            </div>
+            <label for="">Disponível</label>
+            <div>
+                <select type="text" id="disponivel">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+    
+            <button style="margin-top: 10px" onclick="enviar()">Enviar</button>
+        </div>
+
+        <!-- Personalizar Sistema -->
+        <section style="margin-top: 20px;">
+            <label> Mudar Cor do Sistema</label>
+            <div style="background-color: white;">  
+                <div style="border:1px solid black; padding: 30px;">
+                    <button class="button" data-color="white">Padrão</button>
+                    <button class="button" data-color="red">Vermelho</button>
+                    <button class="button" data-color="blue">Azul</button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Adicionar Produto -->
+        <section style="margin-top: 20px;">
+            <label> Opções De Interação Com Estoque</label>
+            <div style="background-color: white;">
+                <div style="border:1px solid black; padding: 30px;">
+                    <button onclick="carregarProdutos()">Carregar Lista</button>
+                    <button onclick="limpar()">Limpar Estoque</button>
+                </div>
+            </div>
+        </section>
+
+    </div>  
+
+
+  
+ 
+            
+</body>
+<script type="text/javascript" src="classes/ClassProduto.js"></script>
+<script type="text/javascript" src="classes/main.js"></script>
+</html>
